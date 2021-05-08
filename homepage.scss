@@ -1,0 +1,1230 @@
+* {
+    box-sizing:border-box;
+    padding:0px;
+    margin:0px;
+  }
+
+html
+{
+    scroll-behavior:auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width:20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    cursor:pointer;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+body
+{
+ display:block;
+ width:100vw;
+ max-width:100%;
+ min-height:100vh;
+ overflow-x: hidden;
+}
+
+.navigation
+{
+    position: absolute;
+    display: none;
+    width:100%;
+    height:20vh;
+    background: rgb(0, 0, 0);
+    z-index:+111;
+}
+.advert
+{
+    display:flex;
+    position: relative;
+    min-width:100%;
+    height:100vh;
+    overflow-x:hidden;
+    .image
+    {
+        position:relative;
+        min-width:100%;
+        height:100vh;
+        transition: all linear 0.1s;
+        img
+        {
+            position:relative;
+            width:100%;    
+            height:100%;
+        }
+
+        .joinRoom
+        {
+            position:absolute;
+            left:40%;
+            width:50vh;
+            height:10vh;
+            box-shadow: 3px 4px 4px #CE1212;
+            border-radius: 70px;
+            outline:none;
+            border:none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 23px;
+            line-height: 27px;
+            text-align: center;
+            letter-spacing: 0.07em;
+            font-variant: small-caps;
+            background:rgba(253, 6, 6, 1);
+            bottom:10%;
+            cursor:pointer;
+            transition:all ease-in-out 0.3s;
+    
+            &:hover
+            {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 3px 4px 4px #CE1212;
+                letter-spacing: 0.03em;
+                
+            }
+        }
+        
+        #viewmatch
+        {
+            position:absolute;
+            left:42%;
+            width:40vh;
+            height:10vh;
+            box-shadow: 3px 4px 4px #43a12c;
+            border-radius: 70px;
+            outline:none;
+            border:none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 23px;
+            line-height: 27px;
+            text-align: center;
+            letter-spacing: 0.07em;
+            font-variant: small-caps;
+            background:rgba(8, 155, 32, 0.753);
+            bottom:10%;
+            cursor:pointer;
+            transition:all ease-in-out 0.3s;
+    
+            &:hover
+            {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 3px 4px 4px #19e735;
+                letter-spacing: 0.03em;
+                
+            }
+        }
+
+    }
+
+
+    
+  
+
+}
+
+
+
+.one
+{
+    display: block;
+    position:relative;
+    width:100%;
+    height:100vh;
+    background: #E5E5E5;
+    .refrence
+    {
+        position:relative;
+        display: flex;
+        align-items:center;
+        flex-wrap: wrap;
+        gap:4%;
+        justify-content: center;
+        width:100%;
+        height:35vh;
+        background: rgba(238, 235, 221, 1);
+
+        div
+        {
+            position:relative;
+            width: 20%;
+            height:80%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:40% 30% 30%;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 7px 4px 4px rgba(0, 0, 0, 0.25);
+            transition:all linear 0.2s;
+            svg
+            {
+                grid-row:1/2;
+                position:relative;
+                height:100%;
+                left:2%;
+                top:5%;
+            }
+
+            .title
+            {  
+                grid-row:2/3;
+                width:100%;
+                height:100%;
+                span
+                {
+                    font-family: Algerian;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 36px;
+                    line-height: 67px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: rgba(20, 23, 26, 0.49);
+                    text-align: center;
+                }
+            }
+
+            .btn
+            {
+                grid-row:3/4;
+                width:100%;
+                height:100%;
+
+                button
+                {
+                    position: relative;
+                    left:60%;
+                    top:60%;
+                    width: 92px;
+                    height: 30px;        
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    text-align: center;
+                    color: #F0E3CA;
+                    background: rgba(206, 18, 18, 0.87);
+                    box-shadow: inset 1px 2px 3px rgba(199, 60, 25, 0.822);
+                    border-radius: 13px;
+                    border:none;
+                    outline:none;
+                    
+                }
+
+            }
+
+        
+            &:hover  .title span
+            {
+                color:#14171A;
+            }
+        }
+
+        .fontpicker
+        {
+            &:hover
+            {
+                border-bottom:4px solid #f70202;
+            }
+
+
+        }
+
+        .youtubers
+        {
+            &:hover
+            {
+                border-bottom:4px solid #f70202;
+            }
+        }
+
+        .topup
+        {
+            &:hover
+            {
+                border-bottom:4px solid #f70202;
+            }
+        }
+        
+        .wallpapers
+        {
+            &:hover
+            {
+                border-bottom:4px solid #f70202;
+            }
+        }
+    }
+
+    .article
+    { 
+        position:relative;
+        display:block;
+        width:100%;
+        height:65vh;
+        background: rgba(238, 235, 221, 1);
+
+        .cards
+        {
+            position:relative;
+            display:flex;
+            flex-direction: row;
+            align-items:center;
+            justify-content: center;
+            width:100vw;
+            min-width:100vw;
+            height:100%;
+            gap:5vw;
+
+            .card
+            {
+                position:relative;
+                width:30vw;
+                height:90%;
+                display:grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 50% 35% 15%;
+                bordeR:1px solid white;
+                background: white;
+                box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+                padding:0;
+                margin:0;
+               transition: all ease-in-out 0.5s;
+                &:hover .card-image img
+                {
+                    opacity:1;
+                }
+
+                &:hover 
+                {
+                    transform:scale(1.02);
+                }
+
+                &:hover .card-about h2 span
+                {
+                    color:#ff0000;
+                    text-decoration:underline;
+                }
+
+                .card-image
+                {
+                    grid-row:1/2;
+                    
+                  
+                   img
+                   {  transition: all ease-in-out 0.5s;
+                       position: relative;
+                       height:100%;
+                       width:100%;
+                       object-fit: cover;
+                       opacity: 0.5;
+                   }
+                }
+
+                .card-about
+                {
+                    grid-row:2/3;
+                    transition: all ease-in-out 0.3s;
+                    display:grid;
+                    border-top:4px solid #ff0000;
+
+                    h2
+                    {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-variant: small-caps;
+                        font-size:medium;
+                        padding:4px;
+                        color:#14171A;
+                        word-spacing:3px;
+
+                        span
+                        {
+                            color:#ce1212;
+                            text-transform: capitalize;
+                        }
+
+                        &:hover span
+                        {
+                            color:#f70202;
+
+                        }
+                    }
+
+                    p
+                    {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        text-transform:lowercase;
+                        font-style: italic;
+                        font-size:smaller;
+                        padding:4px;
+                        color:#14171A;
+                        word-spacing:1px;
+                    }
+                }
+
+                .card-icons
+                {
+                    cursor:pointer;
+                    grid-row:3/4;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    grid-template-areas: "like"  "view" "share";
+
+                    .like
+                    {
+                        grid-area:"like";
+                       
+                        svg
+                        {
+                            position: relative;
+                            left:25%;
+                            top:5%;
+                        }
+
+                        &:hover
+                        {
+                            border-bottom:2px solid #f70202;
+                        }
+                        &:hover svg path
+                        {
+                          fill:#ff0000;
+                        }
+                    }
+                    
+                    .view
+                    {
+                        grid-area:"view";
+                       
+                  
+
+                        svg
+                        {
+                            position:relative;
+                            left:25%;
+                            top:5%;
+                            width:3em;
+                            height:3em;
+                            transition: all linear 0.3s;
+                           
+                            path
+                            {
+                                fill:#ff0000;
+                            }
+                        }
+
+                        &:hover
+                        {
+                            border-bottom:2px solid #f70202;
+
+                        }
+
+                        &:hover svg path
+                        {
+                          fill:#a31515;
+                        }
+                    }
+
+                    .share
+                    {
+                        grid-area:"share";
+                        
+                       
+                        svg
+                        {
+                            position:relative;
+                            left:30%;
+                            top:25%;
+                        }
+
+                        &:hover
+                        {
+                            border-bottom:3px solid #f70202;
+                        }
+                        &:hover svg path
+                        {
+                          fill:#ff0000;
+                        }
+                    }
+
+                }
+
+
+            }
+        }
+    }
+}
+
+.two
+{
+    position: relative;
+    display:flex;
+    width:100%;
+    height:100vh;
+    background:#EEEBDD;
+    align-items: center;
+    justify-content: center;
+
+    .joinform
+    {
+        display:block;
+        width:90%;
+        height:90%;
+        background: linear-gradient(180deg, rgba(253, 6, 6, 0) 0%, rgba(20, 23, 26, 0) 100%);
+        border:2px solid #6b6b6b;
+        box-sizing: border-box;
+        filter: drop-shadow(18px 19px 2px rgba(0, 0, 0, 0.50));
+        float:left;
+        .right-form
+        {
+            position:relative;
+            width:50%;
+            height:100%;
+            float:left;
+            img
+            {
+                position: relative;
+                width:80%;
+                height:80%;
+                margin-top:5%;
+                margin-left:10%;
+                object-fit: scale-down;
+            }
+
+            header
+            {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 45px;
+                line-height: 65px;
+                text-align: center;
+                letter-spacing: 0.03em;
+                font-variant: small-caps;
+                text-shadow: 4px 2px 2px 0px rgba(137, 135, 135, 0.78) inset;
+                
+            }
+        }
+
+        .left-form
+        {
+            position:relative;
+            width:50%;
+            height: 100%;
+
+            float:left;
+
+            form
+            {
+                position: relative;
+                width:100%;
+                height:100%;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                flex-direction:column;
+                input
+                {
+                    position:relative;
+                    width:80%;
+                    height:15%;
+                    border:1px solid #000000;
+                    box-sizing: border-box;
+                    filter: drop-shadow(4px 9px 4px rgba(0, 0, 0, 0.47));
+                    border-radius: 17px;
+                    outline:none;
+                    background:none;
+                    margin-top:5%;
+
+                   
+                }
+
+                input[type=tel]
+                {
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 38px;
+                    line-height: 35px;
+                    text-align: center;
+                    letter-spacing: 0.04em;
+                    font-variant: small-caps;
+                    color: #000000;
+                    &::placeholder
+                    {
+                        color:#3d3d3d;
+                        opacity:1;
+                    }
+                  
+                }
+
+                select
+                {
+                    position:relative;
+                
+                    border:1px solid #000000;
+                    box-sizing: border-box;
+                    filter: drop-shadow(4px 9px 4px rgba(0, 0, 0, 0.47));
+                    border-radius: 17px;
+                    outline:none;
+                    background:none;
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 34px;
+                    line-height: 35px;
+                    text-align: center;
+                    text-align-last: center;
+                    letter-spacing: 0.04em;
+                    font-variant: small-caps;
+                    margin-top:5%;
+                 
+                }
+
+                select *
+                {
+                    background:#EEEBDD;
+                }
+
+                #wars
+                {
+                    width:80%;
+                    height:15%;
+                    color: #3d3d3d;
+                 
+                }
+
+                #money
+                {
+                    width:25%;
+                    height:12%;
+                    left:25%;
+                    color: #083f19;
+                }
+
+                input[type=submit]
+                {
+                    background: #FD0606;
+                    border-radius: 70px;
+                
+                    outline:none;
+                    border:none;
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 34px;
+                    line-height: 19px;
+                    text-align: center;
+                    letter-spacing: 0.03em;
+                    font-variant: small-caps;
+                    cursor:pointer;
+                    color: #000000;
+                    transition: all linear 0.3s;
+                    &:hover
+                    {                        
+                      background: #a31515;
+                    }
+                }
+
+
+            }
+        }
+
+    }
+
+}
+
+.three
+{
+    position: relative;
+    display:block;
+    width:100%;
+    height:100vh;
+    background: cornflowerblue;
+
+    .champions
+    {
+        position:relative;
+        width:100%;
+        height:80vh;
+        background:#EEEBDD;
+
+        .champlist
+        {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:100%;
+            min-width:100vw;
+            height:100%;
+            gap:4vh;
+            .champcard
+            {
+                position: relative;
+                width:24%;
+                height:90%;
+               
+                display:grid;
+                grid-template-columns: 1fr;
+                grid-template-rows:80% 20%;
+                box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                border-radius: 0px 37px 0px 0px;
+                transition: all linear 0.3s;
+
+                &:hover .champ-img img
+                {
+                    opacity:1;
+                }
+
+                &:hover .champ-img
+                {
+                    border-bottom:4px solid #ff0000;
+                }
+
+                &:hover
+                {
+                    transform: scale(1.02);
+                }
+                .champ-img
+                {       
+                    position: relative;
+                    grid-row:1/2;
+                    border-radius: 0px 37px 0px 0px;
+                    transition: all linear 0.3s;
+                    img
+                    {
+                     position: relative;
+                     width:100%;
+                     height:100%;
+                     object-fit:cover;
+                     background: #FFFEFE;
+                     border-radius: 0px 37px 0px 0px;
+                     transition: all linear 0.3s;
+                     opacity:1;
+
+                    }
+                }
+
+                .champ-know
+                { 
+                     grid-row:2/3;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    .champ-id
+                    {
+                        grid-column: 1/2;
+                        text-align: center;
+                        &:hover svg path
+                        {
+                            fill:#ff0000;
+
+                        }
+
+                        &:hover
+                        {
+                          border-bottom:2px solid #ff0000;
+                        }
+                        &:hover svg 
+                        {
+                           height:4.0em;
+                           top:-0.5em;
+
+                        }
+                        svg
+                        {
+                            position:relative;
+                            width:5em;
+                            height:4.5em;
+                            transition: all ease-in-out 0.3s;
+                        }
+
+                        span
+                        {
+                            position: relative;
+                            width:100%;
+                            font-family: Algerian;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 15px;
+                            line-height:11px;
+                            text-align: center;
+                            letter-spacing: 0.12em;
+                            text-transform: uppercase;
+                            
+                        }
+
+                    }
+
+                    .champ-guild
+                    {
+                        grid-column: 2/3;
+                        text-align: center;
+
+                        &:hover svg path
+                        {
+                            fill:#ff0000;
+
+                        }
+                        &:hover
+                        {
+                         border-bottom:2px solid #ff0000;
+                        }
+                        &:hover svg 
+                        {
+                           height:4.0em;
+                           top:-0.5em;
+
+                        }
+
+                        svg
+                        {
+                            position:relative;
+                            width:5em;
+                            height:4.5em;
+                            transition: all ease-in-out 0.3s;
+
+
+                        }
+
+                        span
+                        {
+                            position: relative;
+                            width:100%;
+                            font-family: Algerian;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 15px;
+                            line-height:11px;
+                            text-align: center;
+                            letter-spacing: 0.12em;
+                            text-transform: uppercase;
+                            
+                        }
+
+                    }
+
+                    .champ-head
+                    {
+                        grid-column:3/4;
+                        text-align: center;
+                       
+                        &:hover
+                        {
+                         border-bottom:2px solid #ff0000;
+                        }
+                        &:hover svg 
+                        {
+                           height:4.0em;
+                           top:-0.5em;
+                        }
+
+                        &:hover svg path
+                        {
+                            fill:#ff0000;
+
+                        }
+                        svg
+                        {
+                            position:relative;
+                            width:5em;
+                            height:4.5em;
+                            transition: all ease-in-out 0.3s;
+                        }
+                        span
+                        {
+                            position: relative;
+                            width:100%;
+                            font-family: Algerian;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 15px;
+                            line-height:11px;
+                            text-align: center;
+                            letter-spacing: 0.12em;
+                            text-transform: uppercase;
+                            
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .footer
+    {
+        position: relative;
+        width:100%;
+        height:20vh;
+        background:#ce1212;
+    }
+}
+
+
+
+
+
+
+
+
+//svg for media choti waali ......
+
+
+
+
+
+
+   
+@media only screen and (max-width:425px)
+{
+    .navigation
+    {
+        position:relative;
+        display: block;
+        width:100%;
+        height:8vh;
+        background: rgb(255, 255, 255);
+        z-index:+111;
+    }
+    .advert
+    {
+        height:30vh;
+
+            .image
+        {
+            height:30vh;
+            
+            .joinRoom
+            {
+                width: 13vh;
+                height: 4vh;
+                -webkit-box-shadow: 3px 4px 4px #ce1212;
+                box-shadow: 1px 2px 2px #ce1212;
+                border-radius: 70px;
+                outline: none;
+                border: none;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 11px;
+                line-height: 23px;
+                text-align: center;
+                letter-spacing: 0.03em;
+            }
+
+            #viewmatch
+            { 
+                
+                width:9vh;
+                height: 3vh;
+                left:42%;
+                box-shadow: 2px 1px 2px #43a12c;
+                border-radius: 70px;
+                outline: none;
+                border: none;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size:8px;
+                line-height: 23px;
+                text-align: center;
+                letter-spacing: 0.03em;
+
+            }
+
+        }
+    }
+
+    .one
+    {
+        height:162vh;
+       
+            .refrence
+        {
+            height:62vh;
+            gap:2%;
+
+         div
+         {
+            position:relative;
+            width:98%;
+            height:14vh;
+            display: grid;
+            grid-template-columns:30% 70%;
+            grid-template-rows: 50% 50%;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+            transition:all linear 0.2s;
+            
+            svg
+            {
+                grid-column: 1/2;
+                grid-row:1/3;
+                
+            }
+
+            .title
+            {  
+                grid-column:2/3;
+                grid-row:1/2;
+                margin:0;
+                padding:0;
+                background:none;
+             
+                span
+                {
+                    font-family: Algerian;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 26px;
+                    letter-spacing:0.05em;
+                    text-transform: uppercase;
+                    color: rgba(20, 23, 26, 0.49);
+                    text-align: center;
+       
+                    line-height:46px;
+                    width:250px;
+                }
+            }
+
+            .btn
+            {
+                grid-column: 2/3;
+                grid-row:2/3;
+                width:100%;
+                height:100%;  
+                margin:0;
+                padding:0;
+                button
+                {
+                    position: relative;
+                    left: 240%;
+                    top: 20%;
+                    width: 57px;
+                    height: 25px;      
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #F0E3CA;
+                    background: rgba(206, 18, 18, 0.87);
+                    box-shadow: inset 1px 2px 3px rgba(199, 60, 25, 0.822);
+                    border-radius: 13px;
+                    border:none;
+                    outline:none;
+                    
+                }
+
+            }
+
+        }
+
+
+         }
+
+        .article
+        { 
+            height:100vh;
+
+            .cards
+            {
+                position:relative;
+                display:block;
+                flex-direction: row;
+                align-items:center;
+                justify-content: center;
+                width:100vw;
+                min-width:100vw;
+                height:100%;
+                
+    
+                .card
+                {
+                    position:relative;
+                    width:98%;
+                    height:45%;
+                    margin-left:1%;
+                    display:grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 50% 35% 15%;
+                    bordeR:1px solid white;
+                    background: white;
+                    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+                    margin-top:10px;
+                   transition: all ease-in-out 0.5s;
+                   
+    
+    
+                }
+            }
+      
+        }
+    }
+
+    .two
+    {
+        .joinform
+        {
+           
+            .right-form
+            {
+ 
+                width:100%;
+                height:50%;
+    
+                header
+                {
+                    font-size: 35px;
+                }
+            }
+    
+            .left-form
+            {
+                width:100%;
+                height: 50%;
+                form
+                {
+                   
+                    input
+                    {
+                        height:17%;  
+                    }
+    
+                    input[type=tel]
+                    {
+                        font-size:28px;
+                        line-height: 35px;
+                    }
+    
+                    select
+                    {
+                        font-size: 24px;
+                        line-height:15px;
+                    }
+    
+                    select *
+                    {
+                        font-size: 14px;
+                    }
+
+                    input[type=submit]
+                    {
+                        font-size: 24px;
+                        line-height:9px;
+                    }
+    
+    
+                }
+            }
+    
+        }
+    }
+    .three
+    {
+        height:120vh;
+        .champions
+        {
+            height:60vh;
+            .champlist
+            {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content:right;
+                width:400vw;
+                height:100%;
+                gap:4vh;
+                flex:auto;
+                flex-shrink: 0;
+
+                .champcard
+                {
+                    width:90vw;
+                    margin-left:2%;
+                    height:80%;
+                    .champ-know
+                    { 
+                        
+                        .champ-id
+                        {
+                            
+                            svg
+                            {rgb(75, 73, 73)
+                                width:5em;
+                                height:4em;
+                            }
+    
+                            span
+                            {
+                                font-size: 12px;
+                                line-height:4px;
+  
+                            }
+    
+                        }
+    
+                        .champ-guild
+                        {
+                           
+    
+                            svg
+                            {
+                                width:5em;
+                                height:4em;
+                            }
+    
+                            span
+                            {
+                                font-size: 13px;
+                                line-height:11px;
+
+                            }
+    
+                        }
+    
+                        .champ-head
+                        {
+                            grid-column:3/4;
+                            text-align:center;
+                            svg
+                            {
+                                width:5em;
+                                height:4em;
+                            }
+                            span
+                            {
+                                font-size:21px;
+                                line-height:21px;  
+                            }
+    
+                        }
+                    }
+    
+                }
+            }
+        }
+
+        .footer
+        {
+            height:60vh;
+         }
+    }
+}
